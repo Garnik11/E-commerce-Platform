@@ -1,6 +1,9 @@
 import {Link} from "react-router-dom";
 
-export default function Header(){
+
+
+
+export  function Header(){
     return(
         <nav>
             <div className = "navRight">
@@ -17,6 +20,7 @@ export default function Header(){
 
             <div className = "navLeft" >
                 <i className="fas fa-lock fa-lg"></i>
+                <input type="text" placeholder="Search Brand" />
                 <i className="fas fa-search fa-lg"></i>
             </div>
 

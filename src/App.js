@@ -1,10 +1,11 @@
-import Header from "./Header"
+import {Header} from "./Header"
 import './App.css';
 import {Routes, Route  } from "react-router-dom";
-import  Home  from "./Home";
 import  Shop  from "./Shop";
 import  Team  from "./Team";
 import Main from "./Main"
+import Product from "./Product";
+
 
 
 export default function App() {
@@ -13,10 +14,11 @@ export default function App() {
       <header className="App-header">
 
         <Header/>
-        <Main />
         
+
         <Routes>
-          <Route path = '/' element = {<Home/>} />
+          <Route path = '/' element = {<Main/>} />
+          <Route path=":id" element = {<Product/>}/>
           <Route path = '/shop' element = {<Shop/>} />
           <Route path = '/team' element = {<Team/>} />
 
@@ -25,5 +27,6 @@ export default function App() {
       </header>
     </div>
   );
+
 }
 
